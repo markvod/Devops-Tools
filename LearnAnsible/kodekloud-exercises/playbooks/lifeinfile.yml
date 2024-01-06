@@ -1,0 +1,11 @@
+#search for a line and replace
+# ansible-playbook -i inventory lineinfile.yml
+---
+- hosts: node01
+  become: true
+  tasks:
+  - lineinfile:
+      path: /var/www/html/index.html
+      line: 'Welcome to Kodekloud Labs!'
+      state: present
+      insertbefore: BOF

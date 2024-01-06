@@ -1,0 +1,20 @@
+#Creating a playbook to create a file in two different nodes and change its group/user for what is mentioned on the task.
+#to check: ansible-playbook -i inventory perm.yml
+---
+- hosts: node01
+  become: true
+  tasks:
+    - name: Create blog.txt file
+      file:
+        path: /opt/news/blog.txt
+        state: touch
+        group: sam
+
+- hosts: node02
+  become: true
+  tasks:
+    - name: Create story.txt file
+      file:
+        path: /opt/news/story.txt
+        state: touch
+        owner: sam

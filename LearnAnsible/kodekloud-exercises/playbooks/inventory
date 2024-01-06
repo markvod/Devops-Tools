@@ -1,0 +1,12 @@
+#to test ping:
+#ansible -i inventory host -m ping -v
+
+#creating nodes
+
+node01 ansible_host=node01 ansible_connection=ssh ansible_user=bob ansible_ssh_pass=caleston123
+node02 ansible_host=node02 ansible_connection=ssh ansible_user=bob ansible_ssh_pass=caleston123
+
+#creating a group and attributing the nodes to it
+[web_nodes]
+node01
+node02

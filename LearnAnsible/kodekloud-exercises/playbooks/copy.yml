@@ -1,0 +1,10 @@
+#to copy from a directory from another at a specific location 
+#to check: ansible-playbook -i inventory copy.yml
+---
+- hosts: all
+  become: true
+  tasks:
+    - copy:
+        src: /usr/src/blog/index.html
+        dest: /opt/blog
+        remote_src: yes

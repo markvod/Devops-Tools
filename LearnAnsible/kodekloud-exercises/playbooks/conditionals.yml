@@ -1,0 +1,14 @@
+#to use conditionals:
+#to check: ansible-playbook -i localhost, conditionals.yml -vv
+---
+- name: 'Am I a Banana or not?'
+  hosts: localhost
+  connection: local
+  vars:
+    fruit: banana
+  tasks:
+    - command: 'echo "I am a Banana"'
+      when: fruit == "banana"
+
+    - command: 'echo "I am not a Banana"'
+      when: fruit != "banana"

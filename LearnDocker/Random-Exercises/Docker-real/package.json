@@ -1,0 +1,15 @@
+{
+    "name": "server-ip",
+    "version": "1.0.0",
+    "description": "Servidor simples para exibir o endereço IP",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Seu Nome",
+    "license": "MIT",
+    "dependencies": {
+      "http": "^0.0.0" 
+    }
+  }
+  

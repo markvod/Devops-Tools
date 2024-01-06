@@ -1,0 +1,18 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: giropops 
+spec:
+  containers: 
+  - name: girus 
+    image: ubuntu 
+    args: 
+    - sleep 
+    - infinity 
+    volumeMounts: 
+    - name: primeiro-emptydir 
+      mountPath: /giropops 
+  volumes: 
+  - name: primeiro-emptydir 
+    emptyDir: 
+      sizeLimit: 256Mi 

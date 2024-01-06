@@ -1,0 +1,13 @@
+#to install a package and start a service
+#ansible-playbook -i inventory service.yml
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Install httpd package
+    yum: name=vsftpd state=installed
+
+  - name: Start service
+    service:
+      name: vsftpd
+      state: started

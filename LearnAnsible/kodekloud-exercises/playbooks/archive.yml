@@ -1,0 +1,10 @@
+#to archive the files
+#ansible-playbook -i inventory archive.yml
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Create an archive demo.tar.gz
+    archive:
+      path: /usr/src/ecommerce/
+      dest: /opt/ecommerce/demo.tar.gz

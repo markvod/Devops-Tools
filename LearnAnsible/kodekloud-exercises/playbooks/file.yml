@@ -1,0 +1,15 @@
+#to create a file with contents inside of it in a specific location
+#to check: ansible-playbook -i inventory file.yml
+---
+- hosts: node01
+  become: true
+  tasks:
+    - name: create a file
+      copy:
+        dest: /opt/file.txt
+        content: "This file is created by Ansible!"
+
+
+
+
+        

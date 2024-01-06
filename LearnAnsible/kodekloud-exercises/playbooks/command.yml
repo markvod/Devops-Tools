@@ -1,0 +1,9 @@
+#creating a command to check a file in a playbook
+#to check: ansible-playbook -i localhost command.yml -vv
+---
+- name: Execute a command on localhost
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Check Resolv file
+      command: cat /etc/resolv.conf
