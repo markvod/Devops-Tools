@@ -1,0 +1,8 @@
+to build:
+ docker build .
+to build and create a image with a name?
+ docker build . -t my-simple-webapp
+to build and push for your repository
+ docker login
+ docker build . -t youruserdockerhub/my-simple-webapp
+ docker push youruserdockerhub/my-simple-webapp
